@@ -1,0 +1,1512 @@
+<!doctype html>
+<html>
+
+<head>
+    
+    <style>
+    
+        button{
+            
+            padding: 5px;
+            width: 100px;
+        }
+    
+    
+        #container{
+            position: relative;
+        }
+     #container2{
+            position: relative;
+         background-color: white;
+         left: 310px;
+         top: 523px;
+         width: 230px;
+         height: 20px;
+        }
+    
+    </style>
+    
+    
+<script>
+    
+    var studentsArray =[];
+    
+    function init(){
+        
+        document.getElementById("tablerows").innerHTML="";
+        if (localStorage.studentsRecord){
+            studentsArray = JSON.parse(localStorage.studentsRecord);
+            for (var i=0; i <studentsArray.length; i++) {
+                
+                perpareTableCell(i,studentsArray[i].q1,studentsArray[i].q2,studentsArray[i].q3,studentsArray[i].q4,studentsArray[i].q5,studentsArray[i].q6,studentsArray[i].q7,studentsArray[i].q8,studentsArray[i].q9,studentsArray[i].q10,studentsArray[i].q11,studentsArray[i].q12,studentsArray[i].q13,studentsArray[i].q14,studentsArray[i].q15,studentsArray[i].q16,studentsArray[i].q17,studentsArray[i].q18,studentsArray[i].q19,studentsArray[i].q20,studentsArray[i].q21,studentsArray[i].q22,studentsArray[i].q23,studentsArray[i].q24,studentsArray[i].q25,studentsArray[i].q26,studentsArray[i].q27,studentsArray[i].q28,studentsArray[i].q29,studentsArray[i].q30,studentsArray[i].q31,studentsArray[i].q32,studentsArray[i].q33,studentsArray[i].q34,studentsArray[i].q35,studentsArray[i].q36,studentsArray[i].q37,studentsArray[i].q38,studentsArray[i].q39,studentsArray[i].q40,studentsArray[i].q41,studentsArray[i].q42,studentsArray[i].q43,studentsArray[i].q44,studentsArray[i].q45,studentsArray[i].q46,studentsArray[i].q47,studentsArray[i].q48,studentsArray[i].q49,studentsArray[i].q50,studentsArray[i].q51,studentsArray[i].q52,studentsArray[i].q53,studentsArray[i].q54,studentsArray[i].q55,studentsArray[i].q56,studentsArray[i].q57,studentsArray[i].q58,studentsArray[i].q59,studentsArray[i].q60,
+                                 studentsArray[i].q61,studentsArray[i].q62,studentsArray[i].q63,studentsArray[i].q64,studentsArray[i].q65,studentsArray[i].q66,studentsArray[i].q67,studentsArray[i].q68,studentsArray[i].q69,studentsArray[i].q70,studentsArray[i].q71,studentsArray[i].q72,studentsArray[i].q73,studentsArray[i].q74,studentsArray[i].q75,studentsArray[i].q76,studentsArray[i].q77,studentsArray[i].q78,studentsArray[i].q79,studentsArray[i].q80,studentsArray[i].q81,studentsArray[i].q82,studentsArray[i].q83,studentsArray[i].q84,studentsArray[i].q85,studentsArray[i].q86,studentsArray[i].q87);
+            }
+        }
+    }
+    
+    function onRegisterPressed () {
+        var q1 = document.getElementById("q1").value;
+        var q2 = document.getElementById("q2").value;
+        var q3 = document.getElementById("q3").value;
+        var q4 = document.getElementById("q4").value;
+        var q5 = document.getElementById("q5").value;
+        var q6 = document.getElementById("q6").value;
+        var q7 = document.getElementById("q7").value;
+        var q8 = document.getElementById("q8").value;
+        var q9 = document.getElementById("q9").value;
+        var q10 = document.getElementById("q10").value;
+        var q11 = document.getElementById("q11").value;
+        var q12 = document.getElementById("q12").value;
+        var q13 = document.getElementById("q13").value;
+        var q14 = document.getElementById("q14").value;
+        var q15 = document.getElementById("q15").value;
+        var q16 = document.getElementById("q16").value;
+        var q17 = document.getElementById("q17").value;
+        var q18 = document.getElementById("q18").value;
+        var q19 = document.getElementById("q19").value;
+        var q20 = document.getElementById("q20").value;
+        var q21 = document.getElementById("q21").value;
+        var q22 = document.getElementById("q22").value;
+        var q23 = document.getElementById("q23").value;
+        var q24 = document.getElementById("q24").value;
+        var q25 = document.getElementById("q25").value;
+        var q26 = document.getElementById("q26").value;
+        var q27 = document.getElementById("q27").value;
+        var q28 = document.getElementById("q28").value;
+        var q29 = document.getElementById("q29").value;
+        var q30 = document.getElementById("q30").value;
+        var q31 = document.getElementById("q31").value;
+        var q32 = document.getElementById("q32").value;
+        var q33 = document.getElementById("q33").value;
+        var q34 = document.getElementById("q34").value;
+        var q35 = document.getElementById("q35").value;
+        var q36 = document.getElementById("q36").value;
+        var q37 = document.getElementById("q37").value;
+        var q38 = document.getElementById("q38").value;
+        var q39 = document.getElementById("q39").value;
+        var q40 = document.getElementById("q40").value;
+        var q41 = document.getElementById("q41").value;
+        var q42 = document.getElementById("q42").value;
+        var q43 = document.getElementById("q43").value;
+        var q44 = document.getElementById("q44").value;
+        var q45 = document.getElementById("q45").value;
+        var q46 = document.getElementById("q46").value;
+        var q47 = document.getElementById("q47").value;
+        var q48 = document.getElementById("q48").value;
+        var q49 = document.getElementById("q49").value;
+        var q50 = document.getElementById("q50").value;
+        var q51 = document.getElementById("q51").value;
+        var q52 = document.getElementById("q52").value;
+        var q53 = document.getElementById("q53").value;
+        var q54 = document.getElementById("q54").value;
+        var q55 = document.getElementById("q55").value;
+        var q56 = document.getElementById("q56").value;
+        var q57 = document.getElementById("q57").value;
+        var q58 = document.getElementById("q58").value;
+        var q59 = document.getElementById("q59").value;
+        var q60 = document.getElementById("q60").value;
+        var q61 = document.getElementById("q61").value;
+        var q62 = document.getElementById("q62").value;
+        var q63 = document.getElementById("q63").value;
+        var q64 = document.getElementById("q64").value;
+        var q65 = document.getElementById("q65").value;
+        var q66 = document.getElementById("q66").value;
+        var q67 = document.getElementById("q67").value;
+        var q68 = document.getElementById("q68").value;
+        var q69 = document.getElementById("q69").value;
+        var q70 = document.getElementById("q70").value;
+        var q71 = document.getElementById("q71").value;
+        var q72 = document.getElementById("q72").value;
+        var q73 = document.getElementById("q73").value;
+        var q74 = document.getElementById("q74").value;
+        var q75 = document.getElementById("q75").value;
+        var q76 = document.getElementById("q76").value;
+        var q77 = document.getElementById("q77").value;
+        var q78 = document.getElementById("q78").value;
+        var q79 = document.getElementById("q79").value;
+        var q80 = document.getElementById("q80").value;
+        var q81 = document.getElementById("q81").value;
+        var q82 = document.getElementById("q82").value;
+        var q83 = document.getElementById("q83").value;
+        var q84 = document.getElementById("q84").value;
+        var q85 = document.getElementById("q85").value;
+        var q86 = document.getElementById("q86").value;
+        var q87 = document.getElementById("q87").value;
+        
+        
+        
+        
+        
+        var stuObj= { q1:q1,
+                     q2:q2,
+                     q3:q3,
+                     q4:q4,
+                     q5:q5,
+                     q6:q6,
+                     q7:q7,
+                     q8:q8, 
+                     q9:q9, 
+                     q10:q10,
+                     q11:q11,
+                     q12:q12,
+                     q13:q13,
+                     q14:q14,
+                     q15:q15,
+                     q16:q16,
+                     q17:q17,
+                     q18:q18,
+                     q19:q19,
+                     q20:q20,
+                     q21:q21,
+                     q22:q22,
+                     q23:q23,
+                     q24:q24,
+                     q25:q25,
+                     q26:q26,
+                     q27:q27,
+                     q28:q28,
+                     q29:q29,
+                     q30:q30,
+                     q31:q31,
+                     q32:q32,
+                     q33:q33,
+                     q34:q34,
+                     q35:q35,
+                     q36:q36,
+                     q37:q37,
+                     q38:q38,
+                     q39:q39,
+                     q40:q40,
+                     q41:q41,
+                     q42:q42,
+                     q43:q43,
+                     q44:q44,
+                     q45:q45,
+                     q46:q46,
+                     q47:q47,
+                     q48:q48,
+                     q49:q49,
+                     q50:q50,
+                     q51:q51,
+                     q52:q52,
+                     q53:q53,
+                     q54:q54,
+                     q55:q55,
+                     q56:q56,
+                     q57:q57,
+                     q58:q58,
+                     q59:q59,
+                     q60:q60,
+                     q61:q61,
+                     q62:q62,
+                     q63:q63,
+                     q64:q64,
+                     q65:q65,
+                     q66:q66,
+                     q67:q67,
+                     q68:q68,
+                     q69:q69,
+                     q70:q70,
+                     q71:q71,
+                     q72:q72,
+                     q73:q73,
+                     q74:q74,
+                     q75:q75,
+                     q76:q76,
+                     q77:q77,
+                     q78:q78,
+                     q79:q79,
+                    q80:q80,
+                    q81:q81,
+                    q82:q82,
+                    q83:q83,
+                    q84:q84,
+                    q85:q85,
+                    q86:q86,
+                    q87:q87}
+        
+        
+     if (selectedIndex === -1){
+          studentsArray.push(stuObj);   
+            
+        }else{
+            
+            studentsArray.splice(selectedIndex,1,stuObj);
+        }
+                     
+        localStorage.studentsRecord = JSON.stringify(studentsArray);
+        init();
+        onclarpressed();
+                
+        document.getElementById("q1").value="";
+        document.getElementById("q2").value="";
+        document.getElementById("q3").value="";
+        document.getElementById("q4").value="";
+        document.getElementById("q5").value="";
+        document.getElementById("q6").value="";
+        document.getElementById("q7").value="";
+        document.getElementById("q8").value="";
+        document.getElementById("q9").value="";
+        document.getElementById("q10").value="";
+        document.getElementById("q11").value="";
+        document.getElementById("q12").value="";
+        document.getElementById("q13").value="";
+        document.getElementById("q14").value="";
+        document.getElementById("q15").value="";
+        document.getElementById("q16").value="";
+        document.getElementById("q17").value="";
+        document.getElementById("q18").value="";
+        document.getElementById("q19").value="";
+        document.getElementById("q20").value="";
+        document.getElementById("q21").value="";
+        document.getElementById("q22").value="";
+        document.getElementById("q23").value="";
+        document.getElementById("q24").value="";
+        document.getElementById("q25").value="";
+        document.getElementById("q26").value="";
+        document.getElementById("q27").value="";
+        document.getElementById("q28").value="";
+        document.getElementById("q29").value="";
+        document.getElementById("q30").value="";
+        document.getElementById("q31").value="";
+        document.getElementById("q32").value="";
+        document.getElementById("q33").value="";
+        document.getElementById("q34").value="";
+        document.getElementById("q35").value="";
+        document.getElementById("q36").value="";
+        document.getElementById("q37").value="";
+        document.getElementById("q38").value="";
+        document.getElementById("q39").value="";
+        document.getElementById("q40").value="";
+        document.getElementById("q41").value="";
+        document.getElementById("q42").value="";
+        document.getElementById("q43").value="";
+        document.getElementById("q44").value="";
+        document.getElementById("q45").value="";
+        document.getElementById("q46").value="";
+        document.getElementById("q47").value="";
+        document.getElementById("q48").value="";
+        document.getElementById("q49").value="";
+        document.getElementById("q50").value="";
+        document.getElementById("q51").value="";
+        document.getElementById("q52").value="";
+        document.getElementById("q53").value="";
+        document.getElementById("q54").value="";
+        document.getElementById("q55").value="";
+        document.getElementById("q56").value="";
+        document.getElementById("q57").value="";
+        document.getElementById("q58").value="";
+        document.getElementById("q59").value="";
+        document.getElementById("q60").value="";
+        document.getElementById("q61").value="";
+        document.getElementById("q62").value="";
+        document.getElementById("q63").value="";
+        document.getElementById("q64").value="";
+        document.getElementById("q65").value="";
+        document.getElementById("q66").value="";
+        document.getElementById("q67").value="";
+        document.getElementById("q68").value="";
+        document.getElementById("q69").value="";
+        document.getElementById("q70").value="";
+        document.getElementById("q71").value="";
+        document.getElementById("q72").value="";
+        document.getElementById("q73").value="";
+        document.getElementById("q74").value="";
+        document.getElementById("q75").value="";
+        document.getElementById("q76").value="";
+        document.getElementById("q77").value="";
+        document.getElementById("q78").value="";
+        document.getElementById("q79").value="";
+        document.getElementById("q80").value="";
+        document.getElementById("q81").value="";
+        document.getElementById("q82").value="";
+        document.getElementById("q83").value="";
+        document.getElementById("q84").value="";
+        document.getElementById("q85").value="";
+        document.getElementById("q86").value="";
+        document.getElementById("q87").value="";
+        
+        document.getElementById("submit").value="";
+        
+
+                
+    }
+        function perpareTableCell (index,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21,q22,q23,q24,q25,q26,q27,q28,q29,q30,q31,q32,q33,q34,q35,q36,q37,q38,q39,q40,q41,q42,q43,q44,q45,q46,q47,q48,q49,q50,q51,q52,q53,q54,q55,q56,q57,q58,q59,q60,q61,q62,q63,q64,q65,q66,q67,q68,q69,q70,q71,q72,q73,q74,q75,q76,q77,q78,q79,q80,q81,q82,q83,q84,q85,q86,q87) {
+            var table = document.getElementById("tablerows");
+            var row = table.insertRow()
+            var actionCell = row.insertCell(0);
+            var q1cell = row.insertCell(1)
+            var q2Cell = row.insertCell(2);
+            var q3Cell = row.insertCell(3);
+            var q4Cell = row.insertCell(4);
+            var q5Cell = row.insertCell(5);
+            var q6Cell = row.insertCell(6);
+            var q7Cell = row.insertCell(7);
+            var q8Cell = row.insertCell(8);
+            var q9Cell = row.insertCell(9);
+            var q10Cell = row.insertCell(10);
+            var q11Cell = row.insertCell(11);
+            var q12Cell = row.insertCell(12);
+            var q13Cell = row.insertCell(13);
+            var q14Cell = row.insertCell(14);
+            var q15Cell = row.insertCell(15);
+            var q16Cell = row.insertCell(16);
+            var q17Cell = row.insertCell(17);
+            var q18Cell = row.insertCell(18);
+            var q19Cell = row.insertCell(19);
+            var q20Cell = row.insertCell(20);
+            var q21Cell = row.insertCell(21);
+            var q22Cell = row.insertCell(22);
+            var q23Cell = row.insertCell(23);
+            var q24Cell = row.insertCell(24);
+            var q25Cell = row.insertCell(25);
+            var q26Cell = row.insertCell(26);
+            var q27Cell = row.insertCell(27);
+            var q28Cell = row.insertCell(28);
+            var q29Cell = row.insertCell(29);
+            var q30Cell = row.insertCell(30);
+            var q31Cell = row.insertCell(31);
+            var q32Cell = row.insertCell(32);
+            var q33Cell = row.insertCell(33);
+            var q34Cell = row.insertCell(34);
+            var q35Cell = row.insertCell(35);
+            var q36Cell = row.insertCell(36);
+            var q37Cell = row.insertCell(37);
+            var q38Cell = row.insertCell(38);
+            var q39Cell = row.insertCell(39);
+            var q40Cell = row.insertCell(40);
+            var q41Cell = row.insertCell(41);
+            var q42Cell = row.insertCell(42);
+            var q43Cell = row.insertCell(43);
+            var q44Cell = row.insertCell(44);
+            var q45Cell = row.insertCell(45);
+            var q46Cell = row.insertCell(46);
+            var q47Cell = row.insertCell(47);
+            var q48Cell = row.insertCell(48);
+            var q49Cell = row.insertCell(49);
+            var q50Cell = row.insertCell(50);
+            var q51Cell = row.insertCell(51);
+            var q52Cell = row.insertCell(52);
+            var q53Cell = row.insertCell(53);
+            var q54Cell = row.insertCell(54);
+            var q55Cell = row.insertCell(55);
+            var q56Cell = row.insertCell(56);
+            var q57Cell = row.insertCell(57);
+            var q58Cell = row.insertCell(58);
+            var q59Cell = row.insertCell(59);
+            var q60Cell = row.insertCell(60);
+            var q61Cell = row.insertCell(61);
+            var q62Cell = row.insertCell(62);
+            var q63Cell = row.insertCell(63);
+            var q64Cell = row.insertCell(64);
+            var q65Cell = row.insertCell(65);
+            var q66Cell = row.insertCell(66);
+            var q67Cell = row.insertCell(67);
+            var q68Cell = row.insertCell(68);
+            var q69Cell = row.insertCell(69);
+            var q70Cell = row.insertCell(70);
+            var q71Cell = row.insertCell(71);
+            var q72Cell = row.insertCell(72);
+            var q73Cell = row.insertCell(73);
+            var q74Cell = row.insertCell(74);
+            var q75Cell = row.insertCell(75);
+            var q76Cell = row.insertCell(76);
+            var q77Cell = row.insertCell(77);
+            var q78Cell = row.insertCell(78);
+            var q79Cell = row.insertCell(79);
+            var q80Cell = row.insertCell(80);
+            var q81Cell = row.insertCell(81);
+            var q82Cell = row.insertCell(82);
+            var q83Cell = row.insertCell(83);
+            var q84Cell = row.insertCell(84);
+            var q85Cell = row.insertCell(85);
+            var q86Cell = row.insertCell(86);
+            var q87Cell = row.insertCell(87);
+            
+            
+            
+            
+            actionCell.innerHTML = '<button onclick="onEditpressed('+index+')">Edit</button><br><button onclick="deleteTableRow('+index+')">Delect</button>';
+            q1cell.innerHTML = q1;
+            q2Cell.innerHTML = q2;
+            q3Cell.innerHTML = q3;
+            q4Cell.innerHTML = q4;
+            q5Cell.innerHTML = q5;
+            q6Cell.innerHTML = q6;
+            q7Cell.innerHTML = q7;
+            q8Cell.innerHTML = q8;
+            q9Cell.innerHTML = q9;
+            q10Cell.innerHTML = q10;
+            q11Cell.innerHTML = q11;
+            q12Cell.innerHTML = q12;
+            q13Cell.innerHTML = q13;
+            q14Cell.innerHTML = q14;
+            q15Cell.innerHTML = q15;
+            q16Cell.innerHTML = q16;
+            q17Cell.innerHTML = q17;
+            q18Cell.innerHTML = q18;
+            q19Cell.innerHTML = q19;
+            q20Cell.innerHTML = q20;
+            q21Cell.innerHTML = q21;
+            q22Cell.innerHTML = q22;
+            q23Cell.innerHTML = q23;
+            q24Cell.innerHTML = q24;
+            q25Cell.innerHTML = q25;
+            q26Cell.innerHTML = q26;
+            q27Cell.innerHTML = q27;
+            q28Cell.innerHTML = q28;
+            q29Cell.innerHTML = q29;
+            q30Cell.innerHTML = q30;
+            q31Cell.innerHTML = q31;
+            q32Cell.innerHTML = q32;
+            q33Cell.innerHTML = q33;
+            q34Cell.innerHTML = q34;
+            q35Cell.innerHTML = q35;
+            q36Cell.innerHTML = q36;
+            q37Cell.innerHTML = q37;
+            q38Cell.innerHTML = q38;
+            q39Cell.innerHTML = q39;
+            q40Cell.innerHTML = q40;
+            q41Cell.innerHTML = q41;
+            q42Cell.innerHTML = q42;
+            q43Cell.innerHTML = q43;
+            q44Cell.innerHTML = q44;
+            q45Cell.innerHTML = q45;
+            q46Cell.innerHTML = q46;
+            q47Cell.innerHTML = q47;
+            q48Cell.innerHTML = q48;
+            q49Cell.innerHTML = q49;
+            q50Cell.innerHTML = q50;
+            q51Cell.innerHTML = q51;
+            q52Cell.innerHTML = q52;
+            q53Cell.innerHTML = q53;
+            q54Cell.innerHTML = q54;
+            q55Cell.innerHTML = q55;
+            q56Cell.innerHTML = q56;
+            q57Cell.innerHTML = q57;
+            q58Cell.innerHTML = q58;
+            q59Cell.innerHTML = q59;
+            q60Cell.innerHTML = q60;
+            q61Cell.innerHTML = q61;
+            q62Cell.innerHTML = q62;
+            q63Cell.innerHTML = q63;
+            q64Cell.innerHTML = q64;
+            q65Cell.innerHTML = q65;
+            q66Cell.innerHTML = q66;
+            q67Cell.innerHTML = q67;
+            q68Cell.innerHTML = q68;
+            q69Cell.innerHTML = q69;
+            q70Cell.innerHTML = q70;
+            q71Cell.innerHTML = q71;
+            q72Cell.innerHTML = q72;
+            q73Cell.innerHTML = q73;
+            q74Cell.innerHTML = q74;
+            q75Cell.innerHTML = q75;
+            q76Cell.innerHTML = q76;
+            q77Cell.innerHTML = q77;
+            q78Cell.innerHTML = q78;
+            q79Cell.innerHTML = q79;
+            q80Cell.innerHTML = q80;
+            q81Cell.innerHTML = q81;
+            q82Cell.innerHTML = q82;
+            q83Cell.innerHTML = q83;
+            q84Cell.innerHTML = q84;
+            q85Cell.innerHTML = q85;
+            q86Cell.innerHTML = q86;
+            q87Cell.innerHTML = q87;
+            
+           
+            
+        }
+
+    function deleteTableRow(index){
+        /*var table = document.getElementById("regtable"); 
+        table.deleteRow(index+1);*/
+        studentsArray.splice(index,1);
+        localStorage.studentsRecord = JSON.stringify(studentsArray);
+        init();
+    }
+    
+    function onclarpressed(){
+        selectedIndex = -1;
+        
+                
+        document.getElementById("q1").value="";
+        document.getElementById("q2").value="";
+        document.getElementById("q3").value="";
+        document.getElementById("q4").value="";
+        document.getElementById("q5").value="";
+        document.getElementById("q6").value="";
+        document.getElementById("q7").value="";
+        document.getElementById("q8").value="";
+        document.getElementById("q9").value="";
+        document.getElementById("q10").value="";
+        document.getElementById("q11").value="";
+        document.getElementById("q12").value="";
+        document.getElementById("q13").value="";
+        document.getElementById("q14").value="";
+        document.getElementById("q15").value="";
+        document.getElementById("q16").value="";
+        document.getElementById("q17").value="";
+        document.getElementById("q18").value="";
+        document.getElementById("q19").value="";
+        document.getElementById("q20").value="";
+        document.getElementById("q21").value="";
+        document.getElementById("q22").value="";
+        document.getElementById("q23").value="";
+        document.getElementById("q24").value="";
+        document.getElementById("q25").value="";
+        document.getElementById("q26").value="";
+        document.getElementById("q27").value="";
+        document.getElementById("q28").value="";
+        document.getElementById("q29").value="";
+        document.getElementById("q30").value="";
+        document.getElementById("q31").value="";
+        document.getElementById("q32").value="";
+        document.getElementById("q33").value="";
+        document.getElementById("q34").value="";
+        document.getElementById("q35").value="";
+        document.getElementById("q36").value="";
+        document.getElementById("q37").value="";
+        document.getElementById("q38").value="";
+        document.getElementById("q39").value="";
+        document.getElementById("q40").value="";
+        document.getElementById("q41").value="";
+        document.getElementById("q42").value="";
+        document.getElementById("q43").value="";
+        document.getElementById("q44").value="";
+        document.getElementById("q45").value="";
+        document.getElementById("q46").value="";
+        document.getElementById("q47").value="";
+        document.getElementById("q48").value="";
+        document.getElementById("q49").value="";
+        document.getElementById("q50").value="";
+        document.getElementById("q51").value="";
+        document.getElementById("q52").value="";
+        document.getElementById("q53").value="";
+        document.getElementById("q54").value="";
+        document.getElementById("q55").value="";
+        document.getElementById("q56").value="";
+        document.getElementById("q57").value="";
+        document.getElementById("q58").value="";
+        document.getElementById("q59").value="";
+        document.getElementById("q60").value="";
+        document.getElementById("q61").value="";
+        document.getElementById("q62").value="";
+        document.getElementById("q63").value="";
+        document.getElementById("q64").value="";
+        document.getElementById("q65").value="";
+        document.getElementById("q66").value="";
+        document.getElementById("q67").value="";
+        document.getElementById("q68").value="";
+        document.getElementById("q69").value="";
+        document.getElementById("q70").value="";
+        document.getElementById("q71").value="";
+        document.getElementById("q72").value="";
+        document.getElementById("q73").value="";
+        document.getElementById("q74").value="";
+        document.getElementById("q75").value="";
+        document.getElementById("q76").value="";
+        document.getElementById("q77").value="";
+        document.getElementById("q78").value="";
+        document.getElementById("q79").value="";
+        document.getElementById("q80").value="";
+        document.getElementById("q81").value="";
+        document.getElementById("q82").value="";
+        document.getElementById("q83").value="";
+        document.getElementById("q84").value="";
+        document.getElementById("q85").value="";
+        document.getElementById("q86").value="";
+        document.getElementById("q87").value="";
+        
+        document.getElementById('submit').innerHTML = "Register";
+    }
+    
+    var selectedIndex = -1;
+    function onEditpressed(index){
+        selectedIndex = index;
+        var stuObj = studentsArray[index];
+        document.getElementById("q1").value = stuObj.q1;
+        document.getElementById("q2").value = stuObj.q2;
+        document.getElementById("q3").value = stuObj.q3;
+        document.getElementById("q4").value = stuObj.q4;
+        document.getElementById("q5").value = stuObj.q5;
+        document.getElementById("q6").value = stuObj.q6;
+        document.getElementById("q7").value = stuObj.q7;
+        document.getElementById("q8").value = stuObj.q8;
+        document.getElementById("q9").value = stuObj.q9;
+        document.getElementById("q10").value = stuObj.q10;
+        document.getElementById("q11").value = stuObj.q11;
+        document.getElementById("q12").value = stuObj.q12;
+        document.getElementById("q13").value = stuObj.q13;
+        document.getElementById("q14").value = stuObj.q14;
+        document.getElementById("q15").value = stuObj.q15;
+        document.getElementById("q16").value = stuObj.q16;
+        document.getElementById("q17").value = stuObj.q17;
+        document.getElementById("q18").value = stuObj.q18;
+        document.getElementById("q19").value = stuObj.q19;
+        document.getElementById("q20").value = stuObj.q20;
+        document.getElementById("q21").value = stuObj.q21;
+        document.getElementById("q22").value = stuObj.q22;
+        document.getElementById("q23").value = stuObj.q23;
+        document.getElementById("q24").value = stuObj.q24;
+        document.getElementById("q25").value = stuObj.q25;
+        document.getElementById("q26").value = stuObj.q26;
+        document.getElementById("q27").value = stuObj.q27;
+        document.getElementById("q28").value = stuObj.q28;
+        document.getElementById("q29").value = stuObj.q29;
+        document.getElementById("q30").value = stuObj.q30;
+        document.getElementById("q31").value = stuObj.q31;
+        document.getElementById("q32").value = stuObj.q32;
+        document.getElementById("q33").value = stuObj.q33;
+        document.getElementById("q34").value = stuObj.q34;
+        document.getElementById("q35").value = stuObj.q35;
+        document.getElementById("q36").value = stuObj.q36;
+        document.getElementById("q37").value = stuObj.q37;
+        document.getElementById("q38").value = stuObj.q38;
+        document.getElementById("q39").value = stuObj.q39;
+        document.getElementById("q40").value = stuObj.q40;
+        document.getElementById("q41").value = stuObj.q41;
+        document.getElementById("q42").value = stuObj.q42;
+        document.getElementById("q43").value = stuObj.q43;
+        document.getElementById("q44").value = stuObj.q44;
+        document.getElementById("q45").value = stuObj.q45;
+        document.getElementById("q46").value = stuObj.q46;
+        document.getElementById("q47").value = stuObj.q47;
+        document.getElementById("q48").value = stuObj.q48;
+        document.getElementById("q49").value = stuObj.q49;
+        document.getElementById("q50").value = stuObj.q50;
+        document.getElementById("q51").value = stuObj.q51;
+        document.getElementById("q52").value = stuObj.q52;
+        document.getElementById("q53").value = stuObj.q53;
+        document.getElementById("q54").value = stuObj.q54;
+        document.getElementById("q55").value = stuObj.q55;
+        document.getElementById("q56").value = stuObj.q56;
+        document.getElementById("q57").value = stuObj.q57;
+        document.getElementById("q58").value = stuObj.q58;
+        document.getElementById("q59").value = stuObj.q59;
+        document.getElementById("q60").value = stuObj.q60;
+        document.getElementById("q61").value = stuObj.q61;
+        document.getElementById("q62").value = stuObj.q62;
+        document.getElementById("q63").value = stuObj.q63;
+        document.getElementById("q64").value = stuObj.q64;
+        document.getElementById("q65").value = stuObj.q65;
+        document.getElementById("q66").value = stuObj.q66;
+        document.getElementById("q67").value = stuObj.q67;
+        document.getElementById("q68").value = stuObj.q68;
+        document.getElementById("q69").value = stuObj.q69;
+        document.getElementById("q70").value = stuObj.q70;
+        document.getElementById("q71").value = stuObj.q71;
+        document.getElementById("q72").value = stuObj.q72;
+        document.getElementById("q73").value = stuObj.q73;
+        document.getElementById("q74").value = stuObj.q74;
+        document.getElementById("q75").value = stuObj.q75;
+        document.getElementById("q76").value = stuObj.q76;
+        document.getElementById("q77").value = stuObj.q77;
+        document.getElementById("q78").value = stuObj.q78;
+        document.getElementById("q79").value = stuObj.q79;
+        document.getElementById("q80").value = stuObj.q80;
+        document.getElementById("q81").value = stuObj.q81;
+        document.getElementById("q82").value = stuObj.q82;
+        document.getElementById("q83").value = stuObj.q83;
+        document.getElementById("q84").value = stuObj.q84;
+        document.getElementById("q85").value = stuObj.q85;
+        document.getElementById("q86").value = stuObj.q86;
+        document.getElementById("q87").value = stuObj.q87;
+        document.getElementById('submit').innerHTML = "Update";
+    }
+        
+    
+</script>
+    
+</head>
+    
+
+<body onload="init()">
+    
+    <div class="container">
+        <fieldset>
+    
+    <header class="headerbar top"><center><strong>FOCUS LIFE ASSURANCE COMPANY LTD</strong></center>
+    
+            </header>
+            
+            </fieldset>
+    <aside class="leftbar">
+        <div>
+        <fieldset>
+                <LEGEND ACCESSKEY=C><strong>ARE YOU AN EXISTING FOCUS LIFE CUSTOMER?</strong></LEGEND>
+
+            <label for="q1">Yes/No</label>
+            <select id="q1">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            </select>
+            <br>
+            <br>
+            <label for="q2"><span> If yes, provide customer ID/policy No:</span></label>
+            <input type="text" placeholder="enter policy No." id="q2">
+            </fieldset>
+            
+            <fieldset>
+                <LEGEND ACCESSKEY=C><strong>ASSIGNMENT :Do you want to assign this policy to your insurance?</strong></LEGEND>
+                <br>
+            <label for="q3">Yes/No</label>
+            <select id="q3">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            </select>
+            </fieldset>
+            <fieldset>
+            <label for="q4"><span> Type of cover you are proposing:</span></label>
+            <input type="text" placeholder="Type of cover." id="q4">
+            </fieldset>
+            <fieldset>
+                <LEGEND ACCESSKEY=C><strong>DETAILS OF PROPOSER</strong></LEGEND>
+                
+            <select id="q5">
+            <option value="Mr">Mr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mrs">Ms</option>
+            </select>
+                <br>
+                <br>
+                <label for="q6"><span> First Name:</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="First Name" id="q6">
+                <br>
+                <br>
+                <label for="q7"><span> Middle Name:</span></label>
+            <input type="text" placeholder="Middle Name" id="q7">
+                <br>
+                <br>
+                <label for="q8"><span> last name</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="last name" id="q8">
+            </fieldset>
+            <fieldset>
+            <label for="q9"><span>Father's name(female proposer only):</span></label>
+            <input type="text" placeholder="female proposer only" id="q9">
+            <label for="q10"><span>Maiden Name:</span></label>
+            <input type="text" placeholder="Maiden Name:" id="q10">
+                
+            </fieldset>
+            <fieldset>
+                <label for="q11"><span>Date of Birth::</span></label>
+            <input type="text" placeholder="Date" id="q11">(DD/MM/YYYY)
+                Gender:
+            <select id="q12">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            </select>
+                <br>
+                <br>
+                
+                <label for="q13">Nationality:</label>
+            <select id="q13">
+            <option value="Zambian."> Zambian.</option>
+            <option value="Non">Non.</option>
+            </select>  
+                <br>
+                <br>
+                 <Strong>Age Proof:</Strong>
+                <br>
+                <br>
+            <select id="q14">
+            <option value="school/college cert"> school/college cert</option>
+            <option value="NRC copy">NRC copy</option>
+            </select>
+                <br>
+                <br>
+            <label for="q15"><span>others(pls. specify):</span></label>
+            <input type="text" placeholder="others" id="q15">
+                <br>
+                <br>
+                <Strong>Identity Proof:</Strong>
+                <br>
+                <br>
+                <select id="q16">
+            <option value="Voters ID card">Voters ID card</option>
+            <option value="NRC copy ">NRC copy</option>
+                    <option value="Driving Licence ">Driving Licence </option>
+            <option value="Aadhar Card ">Aadhar Card </option>
+            </select>
+                    
+                
+                <br>
+                <br>
+            <label for="q17"><span>others(pls. specify):</span></label>
+            <input type="text" placeholder="others" id="q17">
+                
+                <br>
+                <br>
+                <Strong>Qualification:</Strong>
+                
+                <select id="q18">
+            <option value="Iliterate"> Iliterate</option>
+            <option value="SSC">SSC</option>
+            <option value="HSSC">HSSC.</option>
+            <option value="Under Graduate">Under Graduate</option>
+            </select> 
+                <br>
+                <br>
+            <label for="q19"><span>others(pls. specify):</span></label>
+            <input type="text" placeholder="others" id="q19">
+                <br>
+                <br>
+                
+                <strong>Marital Status:</strong>
+                <select id="q20">
+            <option value="Single"> Single</option>
+            <option value="Married">Married</option>
+            <option value="Divored">Divored</option>
+            <option value="widow/widower">widow/widower</option>
+            </select> 
+                <br>
+                <br>
+            <label for="q21"><span>others(pls. specify):</span></label>
+            <input type="text" placeholder="others" id="q21">
+
+                    <br>
+                <br>
+                
+                <strong>Occupation::</strong>
+                <select id="q22">
+            <option value="Business"> Business</option>
+            <option value="Service">Service</option>
+            <option value="Housewife">Housewife</option>
+            <option value="Agriculturalist">Agriculturalist</option>
+            </select> 
+                <br>
+                <br>
+            <label for="q23"><span>others(pls. specify):</span></label>
+            <input type="text" placeholder="others" id="q23">
+
+            </fieldset>
+
+            
+            <fieldset>
+                
+                    <label for="q24"><span>Annual Income:</span></label>
+            <input type="text" placeholder="Annual Income:" id="q24">
+                
+                
+                <label for="q25"><span>NRC#:</span></label>
+            <input type="text" placeholder="NRC#" id="q25">
+                <br>
+                <br>
+                <label for="q26"><span>Income Prof:I.T.Return/Assessment order/Employers Cert Others(Pls.Specify):</span></label>
+            <input type="text" placeholder="Porf" id="q26">
+                
+                <br>
+                <br>
+                <label for="q27"><span> Communication Address:C/o,W/o,D/o,S/o,Other(if any)</span></label>
+            <input type="text" placeholder="Address" id="q27">
+                
+                <br>
+                <br>
+                <label for="q28"><span> House No.& Bldg/Society name </span></label>
+            <input type="text" placeholder="no./name" id="q28">
+                
+                <br>
+                <br>
+                <label for="q29"><span> Road Sector /Landmark: </span></label>
+            <input type="text" placeholder="sector/Landmark" id="q29">
+                
+                <br>
+                <br>
+                <label for="q30"><span> Village/ City </span></label>
+            <input type="text" placeholder=" Village/ City" id="q30">
+                <br>
+                <br>
+                <label for="q31"><span> State</span></label>
+            <input type="text" placeholder=" state" id="q31">
+                <br>
+                <br>
+                <label for="q32"><span> Country</span></label>
+            <input type="text" placeholder="Country" id="q32">
+                <br>
+                <br>
+                <label for="q33"><span> Mobile Number#</span></label>
+            <input type="text" placeholder="number" id="q33">
+                <br>
+                <br>
+                <label for="q34"><span>Email Id</span></label>
+            <input type="text" placeholder="Email" id="q34">
+                <br>
+                <br>
+                <label for="q35"><span> Tel.No.(home)</span></label>
+            <input type="text" placeholder="number" id="q35">
+                <br>
+                <br>
+                <label for="q36"><span> Tel.No.(home)</span></label>
+            <input type="text" placeholder=" number" id="q36">
+
+                
+            </fieldset>
+            
+            
+            <fieldset>
+                
+                
+           Type of bill:         
+                <select id="q37">
+            <option value="Telephone bill"> Telephone</option>
+            <option value="Radio card">Radio card</option>
+            <option value="Electricity bill">Electricity bill</option>
+            <option value="Bank A/C Statement">Bank A/C Statement</option>
+            <option value="Letter From Recognized">Letter From Recognized</option>
+            <option value="Public Authority">Public Authority</option>
+                    </select>
+                <label for="q38"><span>others(pls. specify):</span></label>
+            <input type="text" placeholder="others" id="q38">
+                
+            
+            </fieldset>
+            
+            <fieldset>
+                
+                
+            Beneficiary:    <select id="q39">
+            <option value="Mr">Mr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mrs">Mrs</option>
+                </select>
+                <br>
+                <br>
+                 <label for="q40"><span>Name:</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="name" id="q40">
+                <br>
+                <br>
+                <label for="q41"><span>Date of birth</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Date" id="q41">
+                <br>
+                <br>
+                <label for="q42"><span>Relation with life Assured:</span></label>
+            <input type="text" placeholder="Relation " id="q42">
+                <br>
+                <br>
+                 <label for="q43"><span>Gender:</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Gender:" id="q43">
+                <br>
+                <br>
+                 <label for="q44"><span>Address:</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Address:" id="q44">
+                <br>
+                <br>
+                <label for="q45"><span>Percentage of Entitlement:</span></label>
+            <input type="text" placeholder="Percentage :" id="q45">
+
+
+            
+            </fieldset>
+            
+            <fieldset>
+                 <LEGEND ACCESSKEY=C><strong>DETAILS OF BENEFICIARY AND APPOINTEE:</strong></LEGEND>
+                <br>
+                <br>
+                Beneficiary:    <select id="q46">
+            <option value="Mr">Mr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mrs">Mrs</option>
+                </select>
+                
+                Appointee:<select id="q47">
+            <option value="Mr">Mr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mrs">Mrs</option>
+                </select>
+                <br>
+                <br>
+    
+                
+                <center> 
+              
+                
+                    <TABLE BORDER=1 CELLPADDING=2>
+<TR>
+    <TH ROWSPAN=3 class="cell_color" >Details</TH>
+    
+    </TR>
+<TR>
+     
+    </TR>
+<TR>
+    <TD> Beneficiary:    <select id="q48">
+            <option value="Mr">Mr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mrs">Mrs</option>
+                </select></TD> 
+    
+    
+    </TR>
+<TR>
+    <TH ROWSPAN=3 class="cell_color" >Name</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q49">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    <TH ROWSPAN=3 class="cell_color" >Date of Birth</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q50">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    
+    
+    <TH ROWSPAN=3 class="cell_color" >Relation with life Assured</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q51">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    
+    <TH ROWSPAN=3 class="cell_color" >Gender</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q52">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    
+    <TH ROWSPAN=3 class="cell_color" >Percentage of Entitlement</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q53">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+
+    
+</TABLE>    
+    
+    <br>
+    <br>
+                    
+                    
+          <TABLE BORDER=1 CELLPADDING=2>
+<TR>
+    <TH ROWSPAN=3 class="cell_color" >Details</TH>
+    
+    </TR>
+<TR>
+     
+    </TR>
+<TR>
+     
+    
+    <TD>Appointee:<select id="q54">
+            <option value="Mr">Mr</option>
+            <option value="Ms">Ms</option>
+            <option value="Mrs">Mrs</option>
+                </select></TD>
+    </TR>
+<TR>
+    <TH ROWSPAN=3 class="cell_color" >Name</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q55">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    <TH ROWSPAN=3 class="cell_color" >Date of Birth</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q56">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    
+    
+    <TH ROWSPAN=3 class="cell_color" >Relation with life Assured</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q57">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    
+    <TH ROWSPAN=3 class="cell_color" >Gender</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q58">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+    
+    <TH ROWSPAN=3 class="cell_color" >Percentage of Entitlement</TH>
+    
+    </TR>
+<TR>
+    </TR>
+<TR>
+     <TD><INPUT TYPE=text NAME=number id="q59">
+  <LABEL ACCESSKEY=u></TD>
+    </TR>
+
+    
+</TABLE> 
+  
+        <ul>
+        <li>Where beneficiary is a minor, details of an appointee to be provided.</li>
+<li>Address of beneficiary of the provided if different the Proposer in case of more than one nominee-
+please attach an extra sheet & percentage of entitlement should total to 100%</li>
+        </ul>
+            </center>
+    
+        </fieldset>
+         
+    <fieldset>
+        <label for="q60"><span>Payment Term(PT)</span></label>
+            <input type="text" placeholder="Payment Term" id="q60">
+        
+        <label for="q61"><span>YRS. The Policy Term Will Be</span></label>
+            <input type="text" placeholder="YRS" id="q61">Years 
+        
+
+
+    <LEGEND ACCESSKEY=C><strong>  PREMIUM PAYMENT TERM:</strong></LEGEND>
+        
+        
+        
+            <br>
+                <br>
+                <strong>PREMIUM PAYMENT FREQUENCY: </strong><select id="q62">
+            <option value="Monthly">Monthly</option>
+            <option value="Quarterly">Quarterly</option>
+            <option value="Half Yearly">Half Yearly</option>
+            <option value="Yearly">Yearly</option>
+        <option value="Escalation Percentage">Escalation Percentage</option>
+                </select>
+                <br>
+                <br>
+
+ 
+ 
+<TD>
+                    <LABEL FOR=addr ACCESSKEY=A><strong>Underwriting Comments:</strong><br><TEXTAREA NAME=address id="q63" ROWS=4 COLS=80></TEXTAREA></LABEL>
+            </TD>
+    
+    
+    </fieldset>
+    <fieldset>
+        <strong> DO YOU HAVE INDIVIDUAL LIFE INSURANCE POLICY OR HAVE YOU APPLIED FOR ONE?</strong>   
+        <select id="q64">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select>
+            
+        </fieldset>
+    
+    <fieldset>
+    
+    <label for="q65"><span>Name of insurance Co.</span></label>
+            <input type="text" placeholder="Name of insurance Co." id="q65">
+ 
+        <label for="q66"><span>Policy/Proposal No.</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Policy/Proposal No." id="q66">
+        
+        <label for="q67"><span>Yearly Premium.</span></label>
+            <input type="text" placeholder="Yearly Premium." id="q67">
+        
+        <br>
+        <br>
+    
+        <label for="q68"><span>Sum Premium.</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Sum Premium." id="q68">
+        
+        <label for="q69"><span>Self/Spouse/Parent(Pls. specify).</span></label>
+            <input type="text" placeholder="Policy/Proposal No." id="q69" >
+        
+        <label for="q70"><span>Policy Status.</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Policy Status." id="q70">
+
+ 
+    
+    
+    
+    </fieldset>
+        
+    <fieldset>
+    
+    <label for="q71"><span>Name of insurance Co.</span></label>
+            <input type="text" placeholder="Name of insurance Co." id="q71">
+ 
+        <label for="q72"><span>Policy/Proposal No.</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Policy/Proposal No." id="q72">
+        
+        <label for="q73"><span>Yearly Premium..</span></label>
+            <input type="text" placeholder="Yearly Premium." id="q73">
+        
+        <br>
+        <br>
+    
+        <label for="q74"><span>Sum Premium.</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Sum Premium." id="q74">
+        
+        <label for="q75"><span>Self/Spouse/Parent(Pls. specify).</span></label>
+            <input type="text" placeholder="Policy/Proposal No." id="q75">
+        
+        <label for="q76"><span>Policy Status.</span></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Policy Status." id="q76">
+
+ 
+    
+    
+    
+    </fieldset>
+    
+    <fieldset>
+    <strong>MEDICAL AND OTHER DETAILS OF THE LIFE TO BE ASSURED:</strong>
+        
+        <br>
+        <br>
+        
+        1.have you ever been denied life insurance cover and granted cover with an extra premium or lien or with a restrictive clause, by any insure?
+        <select id="q77">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select>
+        
+        <br>
+        <br>
+2.have you suffered, treated, hospitalized or currently surfing from diabetes or elevated blood sugar, cancer/Leukaemia/ Lymphoma, disease of heart or brain stroke, paralysis, epilepsy, any mental or neurological or genetic disorder, respiratory disease(Asthma, Pneumonia, COPD etc ), or chronic disease of the lungs, kidney, liver, or HIV or digestive disorder (ulcer, Gastric bleeding etc) or chronic infection, circulatory /blood disorder, thalassemia major, bleeding disorder, rheumatoid arthritis, SLE or any other auto immune or connective tissue disorders etc or Hepatitis B or C infection or abuse of alcohol or narcotic drugs.
+<select id="q78">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select> 
+        
+        <br>
+        <br>
+3.Do you have any physical deformity or congenital/acquired (disease, neurological defect etc ) or impairment of hearing or vision (except use of hearing aid or reading glasses) or irregular gait or speech or involuntary movements of limbs or require assistance in carrying out your routine activities (support of wheel chair, clutches etc)
+<select id="q79">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select> 
+        <br>
+        <br>
+4.During the last five years have you been hospitalized for any ailment or disease for a period of seven days or more in continuity underwent test or procedures like biopsy, angiography, dialysis, MRI, CT scan?
+<select id="q80">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select>
+        
+        <br>
+        <br>
+5.For females lives only
+        <br>
+        <br>
+i)Are you presently pregnant? 
+<select id="q81">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select> 
+        <br>
+        <br>
+ii)Have you suffered from illness related to breast, uterus, or ovary? 
+<select id="q82">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select>
+        <br>
+        <br>
+6.Are you exposed to any special hazard associated with your occupation(e.g mines, chemical factory, explosives, corrosive) which may render you susceptible to injuries or illnesses?
+<select id="q83">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select> 
+        
+        <br>
+        <br>
+    
+    <TD>
+                    <LABEL FOR=addr ACCESSKEY=A><strong>If yes, please give details </strong><br><TEXTAREA NAME=address id="q84" ROWS=4 COLS=80></TEXTAREA></LABEL>
+            </TD>  
+        
+<br>
+        <br>
+7.Do you have any history of conviction under any criminal proceedings in Zambia or abroad?
+<select id="q85">
+       
+            <option value="Yes">Yes </option>
+            <option value="No">No</option>
+        </select>
+        <br>
+        <br>
+
+<TD>
+                    <LABEL FOR=addr ACCESSKEY=A><strong>If yes, please give details </strong><br><TEXTAREA NAME=address id="q86" ROWS=4 COLS=80></TEXTAREA></LABEL>
+            </TD>
+
+ 
+<br>
+        <br> 
+ 
+        <label for="q87"><span>important: in case you have not, please provide your email id and mobile number to help us serve you better. 
+in case you do not have a mobile, please provide your landline telephone number.</span></label>
+            <input type="text" placeholder="" id="q87">
+        
+        </fieldset>
+    
+    <fieldset>
+            
+            </fieldset>
+    
+    
+        <fieldset>
+              <center>
+            <label for="submit"></label>
+            <button id="clear" onclick="onclarpressed()">clear</button>
+            <button id="submit" onclick="onRegisterPressed()">Register</button>
+            </center>
+                
+                
+                 
+            </fieldset>
+    
+    
+          
+    </div>    
+        </aside>
+        <div id="container" style="max-height:174px; overflow-y:auto;max-width:940px; overflow-x:auto">
+        <aside class="rightbar">
+            
+        
+            <table id="regtable"  BORDER=1 CELLPADDING=1>
+            
+                <tr>
+                <th>Action</th>
+                <th>Yes/No</th>
+                <th>Policy no.</th>
+                <th>Yes/No</th>
+                <th>Type of cover</th>
+                <th>Status</th>
+                <th>First name</th>
+                <th>Middle name</th>
+                <th>last name</th>
+                <th>Father's name(female proposer only):</th>
+                <th>Maiden Name:</th>
+                <th>Date of birth</th>
+                <th>Gender</th>
+                <th>Nationality:</th>
+                <th>Age Proof: </th>
+                    <th>others(pls. specify):</th>
+                <th>Identity Proof: </th>
+                    <th>others(pls. specify):</th>
+                <th>Qualification:</th>
+                    <th>others(pls. specify):</th>
+                    <th>Marital Status:</th>
+                     <th>others(pls. specify):</th>
+                    <th>Occupation:</th>
+                     <th>others(pls. specify):</th>
+                    <th>Annual Income:</th>
+                    <th>NRC#:</th>
+                    <th>Income Prof:I.T.Return/Assessment order/Employers Cert Others(Pls.Specify):</th>
+                    <th>Communication Address:C/o,W/o,D/o,S/o,Other(if any) :</th>
+                    <th>House No.and Bldg/Society name</th>
+                    <th>Road Sector /Landmark:</th>
+                    <th>Village/ City</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Mobile Number#  </th>
+                    <th>Email</th>
+                    <th>Tel.No.(home)  </th>    
+                    <th>Tel.No.(home)  </th>
+                    <th>Type of bill: </th>
+                    <th>others(pls. specify): </th>
+                    <th>Beneficiary:</th>
+                    <th>Name: </th>
+                    <th>Date of birth </th>
+                    <th>Relation with life Assured: </th>
+                    <th>Gender: </th>
+                    <th>Address:  </th>
+                    <th>Percentage of Entitlement: </th>
+                    <th>Beneficiary: </th>
+                    <th>Appointee: </th>
+                    <th>Beneficiary:  </th>
+                    <th>Name: </th>
+                    <th>Date of birth </th>
+                    <th>Relation with life Assured: </th>
+                    <th>Gender: </th>
+                    <th>Percentage of Entitlement: </th>
+                    <th>Appointee:</th>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Relation with life Assured</th>
+                    <th>Gender</th>
+                    <th>Percentage of Entitlement</th>
+                    <th>Payment Term(PT) </th>
+                    <th>YRS. The Policy Term Will Be </th>
+                    <th>PREMIUM PAYMENT FREQUENCY:  </th>
+                    <th>Underwriting Comments:</th>
+                    <th>DO YOU HAVE INDIVIDUA IFE INSURANCE POLICY OR HAVE YOU APPLIED FOR ONE?</th>
+                    <th>Name of insurance Co.</th>
+                    <th>Policy/Proposal No.</th>
+                    <th>Yearly Premium.</th>
+                    <th>Sum Premium.</th>
+                    <th>Self/Spouse/Parent(Pls. specify). </th>
+                    <th>Policy Status.</th>
+                    <th>Name of insurance Co.</th>
+                    <th>Policy/Proposal No.</th>
+                    <th>Yearly Premium..</th>
+                    <th>Sum Premium.</th>
+                    <th>Self/Spouse/Parent(Pls. specify). </th>
+                    <th>Policy Status.</th>
+                    <th>Q1 Yes/No</th>
+                    <th>Q2 Yes/No</th>
+                    <th>Q3 Yes/No</th>
+                    <th>Q4 Yes/No</th>
+                    <th>Q5 (i) Yes/No</th>
+                    <th>Q5 (ii)Yes/No</th>
+                    <th>Q6 Yes/No</th>
+                    <th>If yes, please give details </th>
+                    <th>Q7 Yes/No</th>
+                    <th>If yes, please give details </th>
+                    <th>important:</th>
+                    
+                
+                </tr>
+                
+                <tbody id="tablerows">
+                
+                </tbody>
+            
+            </table>
+        
+        </aside>
+    
+        <footer class="headerbar bottom"></footer>
+</div>
+    
+        </body>
+
+
+</html>
